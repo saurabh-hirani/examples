@@ -1,12 +1,16 @@
+/*
+Program to be distributed under GPLv3 as present in LICENSE file in the 
+root dir of this repository.
+
+Description: C program to demonstrate Schwartzian Transform.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-//#include <limits.h>
-//#include <time.h>
 
 #define MAXEMP 5
 #define MAXSAL 5000
-
 
 struct struct_emp {
     char* name;
@@ -21,12 +25,6 @@ struct struct_store_sal_emp_ds {
     int salary;
 };
 typedef struct struct_store_sal_emp_ds store_sal_emp_ds;
-
-//int seed_rand() {
-//    time_t seconds;
-//    time(&seconds);
-//    srand((unsigned int)seconds);
-//}
 
 int get_total_salary(emp* emp_ptr) {
     return(emp_ptr->base_salary + emp_ptr->commission);
