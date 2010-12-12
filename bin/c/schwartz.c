@@ -40,7 +40,11 @@ int salary_comparator(const void* emp1, const void* emp2) {
 void build_emp_list(emp* emp_ptr_arr[], int n_emp) {
     int count = 0;
     int max_base_salary = MAXSAL;
+    time_t seconds;
+    time(&seconds);
+    srand((unsigned int)seconds);
     char* base_emp_name = "emp-";
+
     while (count < n_emp) {
         char* numstr = (char*)(malloc(sizeof(char)) + 10);
         sprintf(numstr, "%d", count);
