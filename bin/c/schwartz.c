@@ -16,14 +16,15 @@ struct struct_emp {
     char* name;
     int base_salary;
     int commission;
-
 };
+
 typedef struct struct_emp emp;
 
 struct struct_store_sal_emp_ds {
     emp* curr_emp_ptr;
     int salary;
 };
+
 typedef struct struct_store_sal_emp_ds store_sal_emp_ds;
 
 int get_total_salary(emp* emp_ptr) {
